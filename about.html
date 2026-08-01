@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | For Your Delight</title>
+  <meta name="description" content="We're a small team of artists and designers based in Toronto, dedicated to creating custom event details.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img
+          src="https://static.wixstatic.com/media/65a91a_bfd8dfefff4549a0bec1138644cb6ef4~mv2.png/v1/crop/x_0,y_156,w_500,h_190/fill/w_396,h_150,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Black%20Minimalist%20Home%20Decor%20Logo.png"
+          alt="For Your Delight"
+          onerror="this.style.display='none'; this.parentElement.querySelector('.nav-logo-text').style.display='block'"
+        >
+        <span class="nav-logo-text" style="display:none">for your delight</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="event-details.html">Event Details</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <h1>About Us</h1>
+    <p>We're a small team of artists and designers based in Toronto.</p>
+  </div>
+
+  <!-- Mission -->
+  <section class="mission">
+    <p>Our mission is to bring delight to our customers and clients by creating custom event details that will tie your dream events together.</p>
+  </section>
+
+  <!-- Team -->
+  <section class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Meet the Team</h2>
+      <div class="team-grid">
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">BL</div>
+          <h3>Boyun Leung</h3>
+          <p class="role">Co-founder &amp; Designer</p>
+          <a href="https://www.boyunleung.com" target="_blank" rel="noopener noreferrer">www.boyunleung.com</a>
+        </div>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">JG</div>
+          <h3>Jacqueline Guo</h3>
+          <p class="role">Co-founder &amp; Artist</p>
+          <a href="https://www.instagram.com/a.fickle.artist/" target="_blank" rel="noopener noreferrer">@a.fickle.artist</a>
+        </div>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">JC</div>
+          <h3>Jazlynn Chan</h3>
+          <p class="role">Designer &amp; Artist</p>
+          <a href="https://www.jazlynn.art" target="_blank" rel="noopener noreferrer">www.jazlynn.art</a>
+        </div>
+
+        <div class="team-member">
+          <div class="team-photo-placeholder">AY</div>
+          <h3>Angela Yuan</h3>
+          <p class="role">Artist</p>
+          <a href="https://www.instagram.com/yuangela.visuals" target="_blank" rel="noopener noreferrer">@yuangela.visuals</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry Form -->
+  <section class="section contact" id="inquiry">
+    <div class="contact-inner">
+      <h2 class="section-title">Submit an Inquiry</h2>
+      <p class="contact-cta">Interested in working with us? We'd love to hear from you.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="service">What service are you inquiring about?</label>
+            <select id="service" name="service">
+              <option value="" disabled selected></option>
+              <option value="Wedding Packages">Wedding Packages</option>
+              <option value="Custom Stationery">Custom Stationery</option>
+              <option value="Live Painting">Live Painting</option>
+              <option value="Party Favours">Party Favours</option>
+              <option value="Other">Other (Specify Below)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="message">What can we do for you? *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="referral">Where did you hear about us? *</label>
+            <select id="referral" name="referral" required>
+              <option value="" disabled selected></option>
+              <option value="Instagram">Instagram</option>
+              <option value="At an event (e.g. a wedding)">At an event (e.g. a wedding)</option>
+              <option value="Through a friend">Through a friend</option>
+              <option value="Google">Google</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/foryourdelight.to/" target="_blank" rel="noopener noreferrer">@foryourdelight.to</a>
+      <a href="mailto:foryourdelight.to@gmail.com">foryourdelight.to@gmail.com</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 For Your Delight. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

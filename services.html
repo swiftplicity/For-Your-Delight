@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | For Your Delight</title>
+  <meta name="description" content="Live painting, wedding stationery, and custom event services by For Your Delight in Toronto.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img
+          src="https://static.wixstatic.com/media/65a91a_bfd8dfefff4549a0bec1138644cb6ef4~mv2.png/v1/crop/x_0,y_156,w_500,h_190/fill/w_396,h_150,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Black%20Minimalist%20Home%20Decor%20Logo.png"
+          alt="For Your Delight"
+          onerror="this.style.display='none'; this.parentElement.querySelector('.nav-logo-text').style.display='block'"
+        >
+        <span class="nav-logo-text" style="display:none">for your delight</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="event-details.html">Event Details</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <h1>Services</h1>
+  </div>
+
+  <!-- Live Painting Feature -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="service-feature">
+        <div class="service-feature-text">
+          <h2>Live Painting</h2>
+          <p>Add a unique and unforgettable touch to your event with our Live Painting. Whether it's a wedding, corporate gathering, or special celebration, our skilled artists create beautiful portraits of your guests that double as the perfect party favour.</p>
+          <a href="#inquiry" class="btn btn-outline">Book a Consultation</a>
+        </div>
+        <img
+          class="service-feature-img"
+          src="https://static.wixstatic.com/media/65a91a_475feb3789b14c89a7d732738f27b16b~mv2.png"
+          alt="Live painting at an event"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" style="background: var(--cream); padding-top: 60px; padding-bottom: 60px;">
+    <div class="section-inner">
+      <h2 class="section-title">Past Events</h2>
+      <div class="gallery-grid" style="margin-top: 2.5rem;">
+        <div>
+          <div class="gallery-item">
+            <img src="https://static.wixstatic.com/media/65a91a_a564387f11c84ff5828875e82206d0d4~mv2.jpeg" alt="A&B wedding" loading="lazy">
+          </div>
+          <p class="event-label">A&amp;B, November 2025</p>
+        </div>
+        <div>
+          <div class="gallery-item">
+            <img src="https://static.wixstatic.com/media/65a91a_5baf1dc0fda9408daf76432724e64b8b~mv2.jpg" alt="Wesley CA event" loading="lazy">
+          </div>
+          <p class="event-label">Wesley CA, November 2025</p>
+        </div>
+        <div>
+          <div class="gallery-item">
+            <img src="https://static.wixstatic.com/media/65a91a_d9debb7727524b999fe1f1cdef812fa3~mv2.jpeg" alt="C&J wedding" loading="lazy">
+          </div>
+          <p class="event-label">C&amp;J, September 2025</p>
+        </div>
+        <div>
+          <div class="gallery-item">
+            <img src="https://static.wixstatic.com/media/65a91a_475feb3789b14c89a7d732738f27b16b~mv2.png" alt="Y&J wedding" loading="lazy">
+          </div>
+          <p class="event-label">Y&amp;J, September 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry Form -->
+  <section class="section contact" id="inquiry">
+    <div class="contact-inner">
+      <h2 class="section-title">Submit an Inquiry</h2>
+      <p class="contact-cta">Interested in working with us? We'd love to hear from you.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="service">What service are you inquiring about?</label>
+            <select id="service" name="service">
+              <option value="" disabled selected></option>
+              <option value="Wedding Packages">Wedding Packages</option>
+              <option value="Custom Stationery">Custom Stationery</option>
+              <option value="Live Painting">Live Painting</option>
+              <option value="Party Favours">Party Favours</option>
+              <option value="Other">Other (Specify Below)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="message">What can we do for you? *</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="referral">Where did you hear about us? *</label>
+            <select id="referral" name="referral" required>
+              <option value="" disabled selected></option>
+              <option value="Instagram">Instagram</option>
+              <option value="At an event (e.g. a wedding)">At an event (e.g. a wedding)</option>
+              <option value="Through a friend">Through a friend</option>
+              <option value="Google">Google</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/foryourdelight.to/" target="_blank" rel="noopener noreferrer">@foryourdelight.to</a>
+      <a href="mailto:foryourdelight.to@gmail.com">foryourdelight.to@gmail.com</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 For Your Delight. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
