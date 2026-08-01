@@ -351,19 +351,38 @@ nav {
 }
 
 /* ── About Page ────────────────────────────────────── */
-.mission {
-  background: var(--cream);
-  padding: 70px 2rem;
-  text-align: center;
+.about-split {
+  padding: calc(var(--nav-h) + 60px) 4rem 80px;
+  background: var(--white);
 }
-.mission p {
-  max-width: 640px;
+.about-split-inner {
+  max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 5rem;
+  align-items: center;
+}
+.about-split-text h1 {
   font-family: var(--serif);
-  font-size: 1.25rem;
+  font-size: clamp(4rem, 8vw, 80px);
   font-weight: 300;
-  line-height: 1.9;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+.about-split-text p {
+  font-size: 0.92rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.about-split-photo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 .team-grid {
   display: grid;
@@ -487,6 +506,9 @@ footer {
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .service-feature { grid-template-columns: 1fr; gap: 2rem; }
   .service-feature-img { aspect-ratio: 16 / 9; }
+  .about-split-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .about-split { padding: calc(var(--nav-h) + 40px) 2rem 60px; }
+  .about-split-text h1 { font-size: clamp(3.5rem, 10vw, 5rem); }
 }
 @media (max-width: 700px) {
   .nav-toggle { display: flex; }
